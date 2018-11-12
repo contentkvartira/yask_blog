@@ -624,7 +624,7 @@ a {
           line-height: 17px; } }
       @media screen and (max-width: 991px) {
         .sidebar .popular-posts .post a .tags {
-          display: none;
+          display: block;
           line-height: 15px;
           margin-bottom: 10px; } }
       @media screen and (max-width: 767px) {
@@ -669,7 +669,8 @@ a {
       .sidebar .popular-posts .post a .text-block .tags {
         font-size: 10px;
         color: #C3C3C3;
-        margin: 0; }
+        margin: 0;
+        display: block; }
         @media screen and (max-width: 1600px) {
           .sidebar .popular-posts .post a .text-block .tags {
             font-size: 12px;
