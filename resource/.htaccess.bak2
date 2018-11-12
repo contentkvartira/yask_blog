@@ -1,0 +1,8 @@
+RewriteEngine on 
+RewriteBase / 
+#адрес поддомена
+RewriteCond %{HTTP_HOST} ^(www\.)?pishiprosto.aksenovkk.beget.tech$ [NC]
+#папка на которую будет происходить переадресация
+RewriteCond %{REQUEST_URI} ^/blog/$
+#сама переадресация
+RewriteRule ^(.*)$ $1/public/ [L]
