@@ -674,7 +674,20 @@ a
       padding: 0 10%
       @media screen and (max-width: 767px)
         padding: 0
-
+  .story-text
+    display: flex
+    align-items: center
+    p
+      font-size: 17px
+      @media screen and (max-width: 991px)
+        padding-top: 25px
+  .story-image
+    order: 2
+    @media screen and (max-width: 991px)
+      order: initial
+    img
+      width: 100%
+      height: auto
 .main-block
   .article
     position: relative
@@ -831,6 +844,13 @@ a
     .article-pic
       width: 100%
       height: auto
+  .more-btn
+    display: block
+    text-align: center
+    margin: 50px auto
+    text-transform: uppercase
+    text-decoration: underline
+    font-size: 21px
 
 .article-sidebar
   p
