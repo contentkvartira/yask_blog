@@ -42,18 +42,6 @@
     @media screen and (max-width: 767px)
       flex-direction: column
       margin: 20px 0
-    &:after
-      content: ''
-      position: absolute
-      bottom: 0
-      left: -15px
-      right: 0
-      margin: auto
-      width: calc(100% + 30px)
-      height: 1px
-      background-color: #a6a6a6
-      @media screen and (max-width: 767px)
-        display: none
     .nav-item
       display: inline-block
       font-family: 'Montserrat', sans-serif
@@ -189,6 +177,19 @@ a
 //Top content
 .top-content
   .slider
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: -15px
+      right: 0
+      margin: auto
+      width: calc(100% + 30px)
+      height: 1px
+      background-color: #a6a6a6
+      @media screen and (max-width: 767px)
+        display: none
     .content-item
       display: flex
       @media screen and (max-width: 767px)
@@ -261,11 +262,22 @@ a
           margin-bottom: 10px
       .img-part
         width: 50%
+        position: relative
         @media screen and (max-width: 767px)
           display: none
+        &:after
+          content: ''
+          position: absolute
+          width: 100%
+          height: 100%  
+          top: 0
+          left: 0
+          background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.40) 15%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.40) 85%, #fff 100%)
         img
           width: 100%
           height: auto
+          
+            
 
 //Nav categories
 .nav-category
@@ -335,9 +347,21 @@ a
       padding-bottom: 30px
       @media screen and (max-width: 767px)
         text-align: center
-      img
+      .img_wrapper
         width: 100%
         height: auto
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 0) 50%)
+        img
+          width: 100%
+          height: auto
       .tags
         font-size: 10px
         color: #C3C3C3
@@ -381,7 +405,6 @@ a
         color: #3C3C3B
         transition: all .2s
         &:hover
-          font-weight: 700
           text-decoration: underline
           color: black
       a.active
@@ -619,4 +642,279 @@ a
       @media screen and (max-width: 767px)
         text-align: center
         font-size: 12px
+
+//Single post page nad story opened page
+.article-header
+  .article
+    padding-top: 40px
+    font-size: 14.2px
+    .category
+      font-size: 16.5px
+      font-weight: bold
+      color: #d3ada8
+      text-align: center
+    h4
+      font-size: 33px
+      font-weight: bold
+      text-align: center
+      margin: 0
+    .under-title
+      font-size: 16.5px
+      font-weight: bold
+      color: #d3ada8
+      text-align: center
+      margin-top: 30px
+    hr
+      height: 1px
+      width: 250px
+      background-color: #CFCFCF
+      margin: 30px auto
+    .short-content
+      text-align: center
+      padding: 0 10%
+      @media screen and (max-width: 767px)
+        padding: 0
+
+.main-block
+  .article
+    position: relative
+    .article-pic
+      width: 100%
+      height: auto
+    .article-portrait
+      position: absolute
+      left: 15px
+      width: 80px
+      height: auto
+      margin-top: 45px
+      @media screen and (max-width: 767px)
+        position: initial
+        margin: 25px auto
+        display: block
+    .article-content
+      padding-left: 90px
+      padding-top: 45px
+      font-size: 14.2px
+      @media screen and (max-width: 767px)
+        padding: 0
+    .article-story
+      padding-top: 45px
+      font-size: 14.2px
+    .rating
+      display: flex
+      justify-content: center
+      padding: 50px 0
+      svg
+        width: 28px
+        height: 30px
+        margin: 0 7px
+      .active ~ svg
+        .cls-heart
+          fill: #E8E8E8
+  .next-article
+    padding-top: 30px
+    .upper-title
+      font-size: 12.5px
+      text-transform: uppercase
+      text-align: center
+    h4
+      font-size: 28.17px
+      font-weight: bold
+      text-align: center
+      margin-bottom: 45px
+    .post
+      display: flex
+      justify-content: space-between
+      margin-bottom: 60px
+      @media screen and (max-width: 767px)
+        flex-wrap: wrap
+        margin-bottom: 0
+      img
+        width: calc(50% - 15px)
+        height: auto
+        @media screen and (max-width: 767px)
+          width: 100%
+      .text-content
+        width: calc(50% - 15px)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        position: relative
+        padding-bottom: 25px
+        @media screen and (max-width: 767px)
+          width: 100%
+          padding: 15px 0
+        p
+          font-size: 12px
+        .button
+          @include button
+          font-size: 11px
+          position: absolute
+          bottom: 0
+          margin-top: auto
+          @media screen and (max-width: 767px)
+            position: initial
+            margin-left: 0
+          @media screen and (max-width: 424px)
+            margin: auto
+    .article-pic
+      width: 100%
+      height: auto
+      @media screen and (max-width: 991px)
+        display: none
+  .story-articles
+    display: flex
+    flex-wrap: wrap
+    .post
+      width: 33.3%
+      padding: 50px 15px
+      @media screen and (max-width: 767px)
+        width: 100%
+        padding: 15px 0
+      .name
+        font-size: 19.16px
+        font-weight: bold
+        text-align: center
+        margin: 10px 0
+      .under-title
+        text-align: center
+        font-size: 12px
+        font-weight: bold
+        color: #d3ada8
+      img
+        width: 100%
+        height: auto
+        padding: 0 10px
+        @media screen and (max-width: 767px)
+          width: calc(50% - 10px)
+          padding: 0 10px 0 0
+        @media screen and (max-width: 424px)
+          width: 80%
+          display: block
+          margin: 0 auto 20px auto
+          padding: 0
+      .text-content
+        text-align: center
+        @media screen and (max-width: 767px)
+          display: inline-block
+          vertical-align: middle
+          width: calc(50% - 10px)
+          padding-left: 10px
+          text-align: left
+        @media screen and (max-width: 424px)
+          width: 100%
+          text-align: center
+          padding: 0
+        .name
+          font-size: 19.16px
+          font-weight: bold
+          text-align: center
+          margin: 10px 0
+          @media screen and (max-width: 767px)
+            display: none
+        .under-title
+          font-size: 11px
+          font-weight: bold
+          padding: 0 15%
+          color: #d3ada8
+          @media screen and (max-width: 767px)
+            display: none
+        .short-content
+          font-size: 11px
+          @media screen and (max-width: 767px)
+            font-size: 12px
+        .button
+          @include button
+          font-size: 11px!important
+          padding: 5px 55px
+    .article-pic
+      width: 100%
+      height: auto
+
+.article-sidebar
+  p
+    margin-top: -5px
+    font-weight: bold
+    @media screen and (max-width: 991px)
+      margin-top: 15px
+  .popular-posts
+    @media screen and (max-width: 991px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+    .post
+      @media screen and (max-width: 991px)
+        width: calc(50% - 15px)
+      @media screen and (max-width: 767px)
+        width: 100%
+      a
+        .text-block
+          justify-content: center
+          @media screen and (max-width: 767px)
+            text-align: left
+          h4
+            font-size: 21px
+            font-weight: bold
+            margin-bottom: 20px
+            @media screen and (max-width: 767px)
+              margin-bottom: 0
+          .short-content
+            font-size: 12px
+            font-weight: normal
+  .wrapper
+    @media screen and (max-width: 991px)
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      padding-top: 30px
+    @media screen and (max-width: 767px)
+      flex-wrap: wrap
+    .banner
+      @media screen and (max-width: 991px)
+        width: calc(50% - 15px)
+        height: auto
+        @media screen and (max-width: 767px)
+          width: 100%
+    .inner-wrapper
+      @media screen and (max-width: 991px)
+        width: calc(50% - 15px)
+        display: flex
+        flex-direction: column
+      @media screen and (max-width: 767px)
+        width: 100%
+      .search
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        margin: 30px 0
+        @media screen and (max-width: 991px)
+          margin-top: 0
+        @media screen and (max-width: 767px)
+          margin: 20px 0
+        span
+          font-size: 17px
+          font-weight: 700
+          @media screen and (max-width: 1600px)
+            font-size: 14px
+        input
+          width: 80%
+          border: 1px solid #a6a6a6
+          border-radius: 3px
+          margin-left: 30px
+          font-size: 9px
+          padding: 6px 23px 6px 10px
+          &::placeholder
+            font-weight: 300
+        svg
+          display: inline-block
+          position: absolute
+          right: 4px
+          top: 4px
+          width: 16px
+          height: auto
+      .headings
+        margin-top: 0
 
