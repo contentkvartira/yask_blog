@@ -259,12 +259,25 @@ a {
           line-height: 28px;
           margin: 0; } }
     .top-content .slider .content-item .mobileImg {
-      display: none; }
+      display: none;
+      position: relative; }
+      .top-content .slider .content-item .mobileImg:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(15%, rgba(255, 255, 255, 0.4)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(85%, rgba(255, 255, 255, 0.4)), to(#fff));
+        background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.4) 15%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.4) 85%, #fff 100%); }
       @media screen and (max-width: 767px) {
         .top-content .slider .content-item .mobileImg {
           display: block;
           width: 100%;
           margin: 0 auto; } }
+      .top-content .slider .content-item .mobileImg img {
+        width: 100%;
+        height: auto; }
     .top-content .slider .content-item .description {
       font-size: 14px;
       padding-right: 30%; }
